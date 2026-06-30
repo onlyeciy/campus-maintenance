@@ -34,7 +34,7 @@
 ## 2. Non-Functional Requirements
 | ID | Requirement | Ukuran | Sumber |
 |----|-------------|--------|--------|
-| NFR-01 | Sistem harus dapat diakses melalui perangkat smartphone dan komputer yang memiliki koneksi internet. | Google Chrome (>= 100), Mozilla Firefox (>= 100), Safari (>= 15), dan Microsoft Edge (>= 100) pada desktop dan smartphone | A1 |
+| NFR-01 | Sistem harus dapat diakses melalui perangkat smartphone dan komputer yang memiliki koneksi internet. |Kompetibel penuh dengan Google Chrome (>= 100), Mozilla Firefox (>= 100), Safari (>= 15), dan Microsoft Edge (>= 100) pada desktop dan smartphone | A1 |
 | NFR-02 | Sistem harus membatasi akses fitur dan data berdasarkan peran pengguna. | Matriks hak akses per peran harus terpenuhi untuk Pelapor, Administrator, Teknisi, dan Manajer Fasilitas | IN3 |
 | NFR-03 | Sistem harus menampilkan pembaruan status laporan kepada Pelapor secara tepat waktu. | Maksimal 10 detik di UI Pelapor setelah status diubah di database | G3 |
 | NFR-04 | Sistem harus mendukung waktu respons penugasan yang dapat diukur untuk laporan masuk. | Mencatat durasi waktu penyelesaian dari status Submitted hingga Closed, dengan target rata-rata penyelesaian di bawah 3 hari kerja. | G2, Q3, temuan tindak lanjut |
@@ -47,12 +47,23 @@
 |----|--------|--------|
 | BR-01 | Kategori masalah yang tersedia adalah Peralatan Presentasi, Jaringan & Internet, Kenyamanan Ruangan, Furnitur, Peralatan Laboratorium, Kebersihan & Sanitasi. | EN1, CASE 1 |
 | BR-02 | Prioritas laporan hanya boleh bernilai `High`, `Medium`, atau `Low`. | EN4 |
-| BR-03 | Status laporan harus mengikuti siklus utama `Submitted -> Under Review -> Assigned -> In Progress -> Resolved -> Closed`. | C1, CASE 2.3 |
+| BR-03 | Status laporan harus mengikuti siklus utama yang dapat berulang: 
+`Submitted -> Under Review -> Assigned -> In Progress -> Resolved -> Closed / Reopened`
+. Dari status 
+`Reopened`
+, alur dapat kembali ke 
+`Assigned`
+ saat ditugaskan kembali. | C1, CASE 2.3 |
 | BR-04 | Hanya Administrator yang boleh menentukan prioritas laporan. | EN4, IN3 |
 | BR-05 | Hanya Administrator yang boleh menugaskan Teknisi pada laporan. | EN4, IN3 |
 | BR-06 | Hanya Teknisi yang ditugaskan pada laporan yang boleh memperbarui progres pengerjaan dan menandai pekerjaan selesai. | EN6, IN3 |
 | BR-07 | Laporan tidak boleh ditutup permanen sebelum Pelapor memberikan konfirmasi penyelesaian. | EN3, EN5 |
-| BR-08 | Jika Pelapor menolak hasil perbaikan, Administrator dapat membuka kembali laporan dengan status `Reopened`. | EN5 |
+| BR-08 | Jika Pelapor menolak hasil perbaikan, Administrator dapat membuka kembali laporan dengan status 
+`Reopened`
+. Laporan berstatus 
+`Reopened`
+ wajib ditugaskan kembali oleh Administrator untuk mengubah statusnya kembali menjadi 
+`Assigned`. | EN5 |
 | BR-09 | Sistem tidak mencakup fitur unggah foto atau media visual sebagai bukti keluhan. | EN8, Inception 4 |
 | BR-10 | Sistem tidak mencakup manajemen inventaris, pemesanan suku cadang, absensi, penjadwalan shift, payroll teknisi, integrasi keuangan, atau pelacakan GPS teknisi. | Inception 4 |
 
@@ -143,6 +154,7 @@ Requirement terkait: FR-19, FR-20, FR-21, BR-07, BR-08
 - AC-08.3: Given laporan saya berstatus `Resolved`, When saya menolak hasil perbaikan, Then sistem menyimpan penolakan penyelesaian pada laporan.
 - AC-08.4: Given Pelapor menolak hasil perbaikan, When Administrator membuka kembali laporan, Then sistem mengubah status laporan menjadi `Reopened`.
 - AC-08.5: Given laporan belum dikonfirmasi selesai oleh Pelapor, When Administrator mencoba menutup laporan, Then sistem menolak penutupan permanen.
+- AC-08.6: Given laporan berstatus `Reopened`, When Administrator menugaskan kembali Teknisi, Then sistem mengubah status laporan menjadi `Assigned`.
 
 ### US-09: Mencatat riwayat status
 **Sebagai** Administrator, **saya ingin** setiap perubahan status tercatat otomatis, **sehingga** proses penanganan laporan dapat diaudit.
