@@ -18,7 +18,7 @@
 | FR-13 | Sistem harus mengubah status laporan menjadi `Assigned` setelah Administrator menugaskan Teknisi. | EN4, CASE 2.3, C1 |
 | FR-14 | Sistem harus menampilkan daftar tugas perbaikan yang ditugaskan kepada Teknisi yang sedang login. | EN6, CASE 2.1 |
 | FR-15 | Sistem harus mengizinkan Teknisi menerima tugas yang telah ditugaskan kepada mereka. | EN6, CASE 2.1 |
-| FR-16 | Sistem harus mengizinkan Teknisi mengubah status tugas dari `Assigned` menjadi `In Progress`. | EN6, CASE 2.3, C1 |
+| FR-16 | Sistem harus secara otomatis mengubah status tugas dari `Assigned` menjadi `In Progress` setelah teknisi menerima tugas. | EN6, CASE 2.3, C1 |
 | FR-17 | Sistem harus mengizinkan Teknisi memperbarui progres pengerjaan melalui komentar atau catatan. | EN6, CASE 2.1, Inception 4 |
 | FR-18 | Sistem harus mengizinkan Teknisi menandai pekerjaan sebagai selesai dengan status `Resolved`. | EN6, CASE 2.3, C1 |
 | FR-19 | Sistem harus mengizinkan Pelapor memberikan konfirmasi menerima hasil perbaikan pada laporan berstatus `Resolved`. | EN3, Inception 4 |
@@ -34,12 +34,12 @@
 ## 2. Non-Functional Requirements
 | ID | Requirement | Ukuran | Sumber |
 |----|-------------|--------|--------|
-| NFR-01 | Sistem harus dapat diakses melalui perangkat smartphone dan komputer yang memiliki koneksi internet. | Perangkat dan browser minimum perlu konfirmasi Departemen IT Kampus | A1 |
+| NFR-01 | Sistem harus dapat diakses melalui perangkat smartphone dan komputer yang memiliki koneksi internet. | Google Chrome (>= 100), Mozilla Firefox (>= 100), Safari (>= 15), dan Microsoft Edge (>= 100) pada desktop dan smartphone | A1 |
 | NFR-02 | Sistem harus membatasi akses fitur dan data berdasarkan peran pengguna. | Matriks hak akses per peran harus terpenuhi untuk Pelapor, Administrator, Teknisi, dan Manajer Fasilitas | IN3 |
-| NFR-03 | Sistem harus menampilkan pembaruan status laporan kepada Pelapor secara tepat waktu. | Ambang batas real-time belum ditentukan dan perlu konfirmasi stakeholder | G3 |
-| NFR-04 | Sistem harus mendukung waktu respons penugasan yang dapat diukur untuk laporan masuk. | Target SLA belum ditentukan dan perlu konfirmasi Manajer Fasilitas | G2, Q3, temuan tindak lanjut |
-| NFR-05 | Sistem harus menyimpan riwayat status sehingga dapat diaudit. | Periode retensi data audit perlu konfirmasi stakeholder | IN2 |
-| NFR-06 | Sistem harus menyajikan visualisasi dashboard yang dapat dibaca untuk evaluasi kinerja pemeliharaan. | Jenis grafik minimal: ringkasan per status dan per kategori; standar aksesibilitas visual perlu konfirmasi | IN4, G4 |
+| NFR-03 | Sistem harus menampilkan pembaruan status laporan kepada Pelapor secara tepat waktu. | Maksimal 10 detik di UI Pelapor setelah status diubah di database | G3 |
+| NFR-04 | Sistem harus mendukung waktu respons penugasan yang dapat diukur untuk laporan masuk. | Mencatat durasi waktu penyelesaian dari status Submitted hingga Closed, dengan target rata-rata penyelesaian di bawah 3 hari kerja. | G2, Q3, temuan tindak lanjut |
+| NFR-05 | Sistem harus menyimpan riwayat status sehingga dapat diaudit. | Disimpan secara permanen di database selama minimal 3 tahun | IN2 |
+| NFR-06 | Sistem harus menyajikan visualisasi dashboard yang dapat dibaca untuk evaluasi kinerja pemeliharaan. | Memenuhi standar kontras warna WCAG 2.1 Level AA | IN4, G4 |
 | NFR-07 | Sistem harus berjalan pada stack frontend React, TypeScript, dan Vite. | Sesuai template repositori yang digunakan | C2 |
 
 ## 3. Business Rules
