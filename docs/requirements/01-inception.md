@@ -76,7 +76,7 @@ Mahasiswa dan dosen di lingkungan kampus sering menghadapi berbagai masalah terk
 - C1: Alur Kerja (Workflow Status) — Status laporan harus mengikuti siklus hidup yang kaku dan berurutan: Submitted -> Under Review -> Assigned -> In Progress -> Resolved -> Closed. — *basis: Alur Sistem di CASE.md Bagian 2.3*
 - C2: Teknologi — Aplikasi harus dikembangkan menggunakan stack React, TypeScript, dan Vite (sisi frontend) berdasarkan template repositori yang ada. — *basis: struktur file template di repositori.*
 ## 7. Pertanyaan Terbuka
-- Q1: Apakah pelapor diizinkan mengunggah foto atau bukti visual saat membuat laporan kerusakan? — *pemilik: belum ditentukan*
+- Q1: Apakah pelapor diizinkan mengunggah foto atau bukti visual saat membuat laporan kerusakan? — *pemilik: [DITETAPKAN DI LUAR LINGKUP - Rilis MVP tidak mendukung pengunggahan foto/bukti visual berdasarkan keputusan EN8 di docs/requirements/02-elicitation.md]*
 - Q2: Bagaimana mekanisme autentikasi pengguna? Apakah akan diintegrasikan dengan Single Sign-On (SSO) kampus yang sudah ada? — *pemilik: Departemen IT Kampus*
 - Q3: Apakah ada batas waktu (SLA) otomatis untuk merespons atau menyelesaikan laporan berdasarkan prioritasnya? — *pemilik: Manajer Fasilitas*
 - Q4: Apakah sistem perlu mengirimkan notifikasi instan (email/WhatsApp/push notification) kepada aktor terkait ketika terjadi perubahan status? — *pemilik: belum ditentukan*
