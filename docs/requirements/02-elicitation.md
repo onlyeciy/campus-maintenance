@@ -21,7 +21,7 @@
 ---
 ## B. Temuan Elisitasi
 ### Kebutuhan Eksplisit
-- **EN1**: Pelapor (Mahasiswa/Dosen) harus dapat membuat laporan keluhan baru dengan menentukan kategori fasilitas yang bermasalah (proyektor, internet, AC, kursi, alat laboratorium, kebersihan ruangan) — *sumber: CASE.md Bagian 1 & 2.2*
+- **EN1**: Pelapor (Mahasiswa/Dosen) harus dapat membuat laporan keluhan baru dengan menentukan kategori fasilitas yang bermasalah (Peralatan Presentasi, Jaringan & Internet, Kenyamanan Ruangan, Furnitur, Peralatan Laboratorium, Kebersihan & Sanitasi) — *sumber: CASE.md Bagian 1 & 2.2*
 - **EN2**: Pelapor harus dapat melihat daftar laporan yang pernah mereka buat, melacak status terbarunya, melihat detail laporan, serta menambahkan komentar/catatan — *sumber: CASE.md Bagian 2.1 & 2.2*
 - **EN3**: Pelapor harus memberikan konfirmasi penyelesaian (hasil perbaikan) setelah pekerjaan diselesaikan oleh Teknisi sebelum laporan ditutup — *sumber: CASE.md Bagian 1 & 2.1*
 - **EN4**: Administrator membutuhkan fitur untuk meninjau laporan masuk (Under Review), menentukan kategori & tingkat prioritas (High, Medium, Low), serta menugaskan Teknisi yang sesuai — *sumber: CASE.md Bagian 1, 2.1, & 2.2*
