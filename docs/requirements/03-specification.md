@@ -45,7 +45,7 @@
 ## 3. Business Rules
 | ID | Aturan | Sumber |
 |----|--------|--------|
-| BR-01 | Kategori masalah yang tersedia adalah proyektor, internet, AC, kursi, alat laboratorium, dan kebersihan ruangan. | EN1, CASE 1 |
+| BR-01 | Kategori masalah yang tersedia adalah Peralatan Presentasi, Jaringan & Internet, Kenyamanan Ruangan, Furnitur, Peralatan Laboratorium, Kebersihan & Sanitasi. | EN1, CASE 1 |
 | BR-02 | Prioritas laporan hanya boleh bernilai `High`, `Medium`, atau `Low`. | EN4 |
 | BR-03 | Status laporan harus mengikuti siklus utama `Submitted -> Under Review -> Assigned -> In Progress -> Resolved -> Closed`. | C1, CASE 2.3 |
 | BR-04 | Hanya Administrator yang boleh menentukan prioritas laporan. | EN4, IN3 |
