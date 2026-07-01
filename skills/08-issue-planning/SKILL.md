@@ -1,5 +1,5 @@
 ---
-name: issue-planning
+name: 08-issue-planning
 description: Mengubah requirement, PRD, atau spesifikasi menjadi GitHub Issues yang siap dikerjakan, menggunakan vertical slice (tracer bullet) agar setiap issue independen dan bisa langsung digarap. Gunakan skill ini setiap kali user menyebut "requirement", "PRD", "spesifikasi", "rencana fitur", atau minta dokumen/plan dipecah menjadi issue/task di GitHub — bahkan jika user tidak secara eksplisit menyebut kata "issue".
 ---
 
